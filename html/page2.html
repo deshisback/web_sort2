@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>
+            Страница с табличными данными
+        </title>
+    </head>
+
+    <body>
+        <a id="t7"></a>
+        <table border="1" cellspacing="0" cellpadding="20" align="center">
+            <tr>
+                <td>
+                    <p align="left">
+                        <a href="page1.html">Самые популярные игры</a><br>
+                        <a href="#t7">Список игр</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <details>
+                        <summary>График</summary>
+                        <table>
+                            <tr>
+                                <td>
+                                    <form>
+                                        <p>
+                                            <b>Значение по оси OX</b><br>
+                                            <input type="radio" name="ox" value="1">Дата выхода<br>
+                                            <input type="radio" name="ox" value="2">Тип<br>
+                                            <input type="radio" name="ox" value="3">Бюджет<br>
+                                        </p>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form>
+                                        <p>
+                                            <b>Значение по OY</b><br>
+                                            <input type="checkbox" name="oy" value="1">Позднейшая игра<br>
+                                            <input type="checkbox" name="oy" value="2">Максимальный бюджет<br>
+                                            <input type="checkbox" name="oy" value="3">Количество по типу<br>
+                                        </p>
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="button" value="Построить">
+                    </details>
+                    <details>
+                        <summary>Фильтр</summary>
+                        <form>
+                            Название: <input type="text" name="filter" id="title"><br>
+                            Жанр: <input type="text" name="filter" id="genre"><br>
+                            Год выхода: <input type="number" name="filter" min="1990" max="2024" id="year"><br>
+                            Страна: <input type="text" name="filter" id="country"><br>
+                            Тип: <input type="text" name="filter" id="type"><br>
+                            Бюджет: <input type="number" name="filter" min="1" max="500" id="budget"><br>
+                            <input type="button" value="Найти" id="search">
+                        </form>
+                    </details>
+                    <details>
+                        <summary>Сортировка</summary>
+                        <form>
+                            Первый уровень: 
+                            <select id="first">
+                            </select>
+                            по убыванию?
+                            <input type="checkbox" name="sortBox" id="firstDesc"><br>
+                            Второй уровень: 
+                            <select id="second">
+                            </select>
+                            по убыванию?
+                            <input type="checkbox" name="sortBox" id="secondDesc"><br>
+                            Третий уровень: 
+                            <select id="third">
+                            </select>
+                            по убыванию?
+                            <input type="checkbox" name="sortBox" id="thirdDesc"><br>
+                            <input type="button" value="Сортировать">
+                        </form>
+                    </details>
+
+                    <table border="1" cellspacing="0" cellpadding="20" align="center" id="list">
+                        <tr>
+                            <td>Название</td>
+                            <td>Жанр</td>
+                            <td>Год выхода</td>
+                            <td>Страна </td>
+                            <td>Тип</td>
+                            <td>Бюджет</td>
+                        </tr>
+                        <tr>
+                            <td>Doom eternal</td>
+                            <td>шутер</td>
+                            <td>2020</td>
+                            <td>США</td>
+                            <td>AAA</td>
+                            <td>314</td>
+                        </tr>
+                        <tr>
+                            <td>Left 4 Dead</td>
+                            <td>шутер</td>
+                            <td>2009</td>
+                            <td>США</td>
+                            <td>AA</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Battlefield: bad company</td>
+                            <td>шутер</td>
+                            <td>2010</td>
+                            <td>Швеция</td>
+                            <td>AA</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Singularity</td>
+                            <td>шутер</td>
+                            <td>2010</td>
+                            <td>США</td>
+                            <td>AA</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>TimeShift</td>
+                            <td>шутер</td>
+                            <td>2007</td>
+                            <td>США</td>
+                            <td>AA</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Far Cry 3</td>
+                            <td>шутер</td>
+                            <td>2012</td>
+                            <td>Франция</td>
+                            <td>AA</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Metro 2033 redux</td>
+                            <td>шутер</td>
+                            <td>2014</td>
+                            <td>Украина</td>
+                            <td>A</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>bulletstorm</td>
+                            <td>шутер</td>
+                            <td>2011</td>
+                            <td>Польша</td>
+                            <td>AA</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Payday 2</td>
+                            <td>шутер</td>
+                            <td>2013</td>
+                            <td>Швеция</td>
+                            <td>A</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Titanfall 2</td>
+                            <td>шутер</td>
+                            <td>2016</td>
+                            <td>США</td>
+                            <td>AA</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Elden Ring</td>
+                            <td>Соулс-лайк</td>
+                            <td>2020</td>
+                            <td>Япония</td>
+                            <td>AAA</td>
+                            <td>160</td>
+                        </tr>
+                        <tr>
+                            <td>Lies of p</td>
+                            <td>Соулс-лайк</td>
+                            <td>2023</td>
+                            <td>Корея</td>
+                            <td>AA</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Lord of the Fallen</td>
+                            <td>Соулс-лайк</td>
+                            <td>2023</td>
+                            <td>США</td>
+                            <td>AA</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Sekiro: shadows die twice</td>
+                            <td>Соулс-лайк</td>
+                            <td>2019</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>Mortal Shell</td>
+                            <td>Соулс-лайк</td>
+                            <td>2020</td>
+                            <td>США</td>
+                            <td>A</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Bloodborne</td>
+                            <td>Соулс-лайк</td>
+                            <td>2015</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Nioh 2</td>
+                            <td>Соулс-лайк</td>
+                            <td>2020</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Code Vein</td>
+                            <td>Соулс-лайк</td>
+                            <td>2019</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Blasphemous</td>
+                            <td>Соулс-лайк</td>
+                            <td>2019</td>
+                            <td>Испания</td>
+                            <td>A</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Wo Long</td>
+                            <td>Соулс-лайк</td>
+                            <td>2023</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Resident Evil 7</td>
+                            <td>survival horror</td>
+                            <td>2017</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Silent hill 2 remake</td>
+                            <td>survival horror</td>
+                            <td>2024</td>
+                            <td>Польша</td>
+                            <td>AA</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Resident Evil 4 remake</td>
+                            <td>survival horror</td>
+                            <td>2023</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>SOMA</td>
+                            <td>survival horror</td>
+                            <td>2015</td>
+                            <td>Швеция</td>
+                            <td>A</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Alien isolation</td>
+                            <td>survival horror</td>
+                            <td>2014</td>
+                            <td>Великобритания</td>
+                            <td>AA</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Alan wake 2</td>
+                            <td>survival horror</td>
+                            <td>2023</td>
+                            <td>Финляндия</td>
+                            <td>AA</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>Control</td>
+                            <td>survival horror</td>
+                            <td>2019</td>
+                            <td>Финляндия</td>
+                            <td>AA</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Days Gone</td>
+                            <td>survival horror</td>
+                            <td>2019</td>
+                            <td>США</td>
+                            <td>AAA</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>Dead space</td>
+                            <td>survival horror</td>
+                            <td>2008</td>
+                            <td>США</td>
+                            <td>A</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Dead space 2</td>
+                            <td>survival horror</td>
+                            <td>2010</td>
+                            <td>США</td>
+                            <td>AA</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>Metal Gear Rising</td>
+                            <td>Слэшер</td>
+                            <td>2013</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Bayonetta</td>
+                            <td>Слэшер</td>
+                            <td>2009</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Devil May Cry 5</td>
+                            <td>Слэшер</td>
+                            <td>2016</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Katana zero</td>
+                            <td>Слэшер</td>
+                            <td>2019</td>
+                            <td>США</td>
+                            <td>A</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Devil May Cry 4</td>
+                            <td>Слэшер</td>
+                            <td>2008</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Devil May Cry 3</td>
+                            <td>Слэшер</td>
+                            <td>2006</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Bayonetta 2</td>
+                            <td>Слэшер</td>
+                            <td>2014</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>God of War Ragnarok</td>
+                            <td>Слэшер</td>
+                            <td>2022</td>
+                            <td>США</td>
+                            <td>AAA</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Nier Automata</td>
+                            <td>Слэшер</td>
+                            <td>2017</td>
+                            <td>Япония</td>
+                            <td>AA</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Ghostrunner 2</td>
+                            <td>Слэшер</td>
+                            <td>2023</td>
+                            <td>Польша</td>
+                            <td>A</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Dead cells</td>
+                            <td>Roguelike</td>
+                            <td>2018</td>
+                            <td>Франция</td>
+                            <td>A</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Hades</td>
+                            <td>Roguelike</td>
+                            <td>2018</td>
+                            <td>США</td>
+                            <td>A</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Hades 2</td>
+                            <td>Roguelike</td>
+                            <td>2024</td>
+                            <td>США</td>
+                            <td>AA</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Darkest Dungeon</td>
+                            <td>Roguelike</td>
+                            <td>2016</td>
+                            <td>Канада</td>
+                            <td>A</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Durkest Dungeon 2</td>
+                            <td>Roguelike</td>
+                            <td>2023</td>
+                            <td>Канада</td>
+                            <td>A</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>The binding of Isaac</td>
+                            <td>Roguelike</td>
+                            <td>2011</td>
+                            <td>США</td>
+                            <td>A</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Enter the Gungeon</td>
+                            <td>Roguelike</td>
+                            <td>2017</td>
+                            <td>США</td>
+                            <td>A</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Risk of Rain 2</td>
+                            <td>Roguelike</td>
+                            <td>2013</td>
+                            <td>Великобритания</td>
+                            <td>A</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Noita</td>
+                            <td>Roguelike</td>
+                            <td>2019</td>
+                            <td>Финляндия</td>
+                            <td>A</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Don&#39;t starve</td>
+                            <td>Roguelike</td>
+                            <td>2013</td>
+                            <td>Канада</td>
+                            <td>A</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <script src="C:\Users\Глеб\source\repos\site\JavaScript\data.js"></script>
+        <script src="C:\Users\Глеб\source\repos\site\JavaScript\filter.js"></script>
+        <script src="C:\Users\Глеб\source\repos\site\JavaScript\table.js"></script>
+        <script src="C:\Users\Глеб\source\repos\site\JavaScript\sort.js"></script>
+    </body>
+</html>
