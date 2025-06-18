@@ -4,8 +4,8 @@
         <title>
             Страница с табличными данными
         </title>
+        <link rel="stylesheet" href="C:\Users\Глеб\source\repos\practice4\CSS\style.css">
     </head>
-
     <body>
         <a id="t7"></a>
         <table border="1" cellspacing="0" cellpadding="20" align="center">
@@ -27,9 +27,9 @@
                                     <form>
                                         <p>
                                             <b>Значение по оси OX</b><br>
-                                            <input type="radio" name="ox" value="1">Дата выхода<br>
-                                            <input type="radio" name="ox" value="2">Тип<br>
-                                            <input type="radio" name="ox" value="3">Бюджет<br>
+                                            <input type="radio" name="ox" value="Жанр" checked>Жанр<br>
+                                            <input type="radio" name="ox" value="Тип">Тип<br>
+                                            <input type="radio" name="ox" value="Страна">Страна<br>
                                         </p>
                                     </form>
                                 </td>
@@ -37,16 +37,24 @@
                                     <form>
                                         <p>
                                             <b>Значение по OY</b><br>
-                                            <input type="checkbox" name="oy" value="1">Позднейшая игра<br>
-                                            <input type="checkbox" name="oy" value="2">Максимальный бюджет<br>
-                                            <input type="checkbox" name="oy" value="3">Количество по типу<br>
+                                            <input type="checkbox" name="oy" value="Бюджет">Бюджет<br>
+                                            <input type="checkbox" name="oy" value="Год выхода">Год выхода<br>
                                         </p>
                                     </form>
                                 </td>
+                                <td>
+                                    <b>Тип диаграммы</b><br>
+                                    <select id="graphType">
+                                        <option value="1">Точечная диаграмма
+                                        <option value="2">Гистограмма
+                                        <option value="3">График
+                                    </select>
+                                </td>
                             </tr>
                         </table>
-                        <input type="button" value="Построить">
+                        <input type="button" value="Построить" id="buildBtn">
                     </details>
+                    <svg></svg>
                     <details>
                         <summary>Фильтр</summary>
                         <form>
@@ -494,9 +502,11 @@
                 </td>
             </tr>
         </table>
-        <script src="C:\Users\Глеб\source\repos\site\JavaScript\data.js"></script>
-        <script src="C:\Users\Глеб\source\repos\site\JavaScript\filter.js"></script>
-        <script src="C:\Users\Глеб\source\repos\site\JavaScript\table.js"></script>
-        <script src="C:\Users\Глеб\source\repos\site\JavaScript\sort.js"></script>
+        <script src="http://d3js.org/d3.v7.min.js"> </script>
+        <script src="../JavaScript/data.js"></script>
+        <script src="../JavaScript/chart.js"></script>
+        <script src="../JavaScript/filter.js"></script>
+        <script src="../JavaScript/sort.js"></script>
+        <script src="../JavaScript/table.js"></script>
     </body>
 </html>
